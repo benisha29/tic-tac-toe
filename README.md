@@ -1,16 +1,92 @@
-# React + Vite
+# Tic-Tac-Toe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A classic Tic-Tac-Toe game built with React. Simple, fun, and works on both desktop and mobile.
 
-Currently, two official plugins are available:
+## 🎮 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Two-player game** - Play with a friend on the same device
+- **Move history** - Go back to any previous move
+- **Winner detection** - Game automatically tells you who won
+- **Clean design** - Modern look with smooth animations
+- **Works on mobile** - Responsive layout for all devices
 
-## React Compiler
+## 🛠️ Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- CSS3
+- Create React App
 
-## Expanding the ESLint configuration
+## 📋 What You Need
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Before starting, make sure you have:
+- Node.js installed (version 14 or newer)
+- npm or yarn package manager
+
+## 🚀 How to Run
+
+1. **Download the code**
+```bash
+git clone https://github.com/yourusername/tic-tac-toe.git
+cd tic-tac-toe
+```
+
+2. **Install everything**
+```bash
+npm install
+```
+
+3. **Start the app**
+```bash
+npm start
+```
+
+4. **Open your browser**
+Go to `http://localhost:3000` and start playing!
+
+## 🎯 How to Play
+
+1. **X goes first** - Click any empty square
+2. **Take turns** - Players alternate between X and O
+3. **Win the game** - Get three in a row (horizontal, vertical, or diagonal)
+4. **Draw** - If all squares fill up with no winner
+5. **History** - Click the buttons on the right to see past moves
+
+## 📁 Files in This Project
+
+```
+tic-tac-toe/
+├── src/
+│   ├── App.js        # Main game code
+│   ├── App.css       # All the styling
+│   └── index.js      # Starting point
+├── public/
+├── package.json
+└── README.md
+```
+
+## 🧠 What You'll Learn
+
+This project shows you:
+- How React components work
+- Using useState for game data
+- Handling button clicks
+- Passing info between components
+- Basic game logic
+
+## 📱 Mobile Friendly
+
+The game looks good on:
+- **Desktops** - Board and history side by side
+- **Phones** - Everything stacks vertically
+
+## 📝 License
+
+Free to use and learn from.
+
+## ⭐ Thanks
+
+Based on React's official tutorial. Built for learning and fun.
+
+---
+
+**Enjoy the game!** 🎉
