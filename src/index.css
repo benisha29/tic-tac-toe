@@ -1,68 +1,156 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 20px;
+  background: linear-gradient(180deg, #afbcf5 0%, #3b096d 100%);
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: rgb(50, 2, 80);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(228, 213, 238, 0.3);
+  max-width: 800px;
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.game-board {
+  flex: 1;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #8993dc;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 5px rgba(235, 215, 215, 0.1);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  background: rgb(188, 178, 240);
+  border: 2px solid #8a60b4;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 80px;
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  border-radius: 15px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.square:hover {
+  background: #f0e6ff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(179, 131, 228, 0.3);
+}
+
+.square:active {
+  transform: scale(0.95);
+}
+
+.square:focus {
+  outline: none;
+}
+
+/* Style for X and O */
+.square[value="X"] {
+  color: #667eea;
+}
+
+.square[value="O"] {
+  color: #3a1c57;
+}
+
+.game-info {
+  flex: 0 0 200px;
+  background: #eaeff4;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 10px rgba(176, 147, 147, 0.05);
+}
+
+.game-info ol {
+  margin: 0;
+  padding-left: 9px;
+  list-style-position: outside;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.game-info button {
+  background: #030f43 0%;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-info button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.game-info button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .game {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
   }
-  a:hover {
-    color: #747bff;
+  
+  .square {
+    height: 60px;
+    width: 60px;
+    font-size: 36px;
+    line-height: 60px;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  .status {
+    font-size: 20px;
+  }
+  
+  .game-info {
+    flex: auto;
+    width: 100%;
   }
 }
